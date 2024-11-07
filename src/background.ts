@@ -149,10 +149,9 @@ if (gotTheLock) {
     });
 
     mainWindow.webContents.setWindowOpenHandler((details) => {
-      shell.openExternal(details.url)
-      return {action: "deny"}
+      shell.openExternal(details.url);
+      return { action: "deny" };
     });
-
 
     mainWindow.webContents.on("context-menu", popupContextMenu);
 
